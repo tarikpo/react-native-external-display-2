@@ -1,0 +1,21 @@
+# React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+*.lock
+
+# Android
+android/app/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcworkspace/
+
+# Misc
+.DS_Store
+*.swp

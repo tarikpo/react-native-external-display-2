@@ -1,0 +1,44 @@
+{
+  "name": "react-native-external-display",
+  "version": "0.6.6",
+  "description": "React Native view renderer in External Display",
+  "main": "index.js",
+  "react-native": {
+    "nativeModules": [
+      "RNExternalDisplayModule"
+    ],
+    "viewManagers": [
+      "RNExternalDisplayManager"
+    ]
+  },
+  "scripts": {
+    "codegen": "react-native-codegen",
+    "postinstall": "yarn codegen",
+    "build": "echo 'Define your build steps here'",
+    "test": "echo 'Define your test steps here'"
+  },
+  "author": "Tarik Porobic",
+  "homepage": "https://github.com/tarikpo/react-native-external-display-2",
+  "repository": "https://github.com/tarikpo/react-native-external-display-2",
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "keywords": [
+    "react-native",
+    "external-display",
+    "uiscene",
+    "native-module",
+    "native-ui-component",
+    "ios",
+    "android"
+  ],
+  "license": "MIT",
+  "codegenConfig": {
+    "name": "RNExternalDisplaySpec",
+    "type": "all",
+    "jsSrcsDir": "./js/"
+  },
+  "devDependencies": {
+    "react-native-codegen": "^0.70.7"
+  }
+}
