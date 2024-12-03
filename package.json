@@ -2,7 +2,13 @@
   "name": "react-native-external-display",
   "version": "0.6.6",
   "description": "React Native view renderer in External Display",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "ios/",
+    "android/",
+    "README.md"
+  ],
   "react-native": {
     "nativeModules": [
       "RNExternalDisplayModule"
@@ -13,9 +19,11 @@
   },
   "scripts": {
     "codegen": "react-native-codegen",
-    "postinstall": "yarn codegen",
-    "build": "echo 'Define your build steps here'",
-    "test": "echo 'Define your test steps here'"
+    "build": "babel src --out-dir lib --copy-files",
+    "watch": "babel src --out-dir lib --copy-files --watch",
+    "test": "echo 'Define your test steps here'",
+    "prepublishOnly": "yarn build",
+    "lint": "eslint src/**/*.js"
   },
   "author": "Tarik Porobic",
   "homepage": "https://github.com/tarikpo/react-native-external-display-2",
@@ -39,6 +47,13 @@
     "jsSrcsDir": "./js/"
   },
   "devDependencies": {
-    "react-native-codegen": "^0.70.7"
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-flow": "^7.25.9",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
+    "react-native-codegen": "^0.70.7",
+    "typescript": "^5.7.2"
   }
 }

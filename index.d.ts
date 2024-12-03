@@ -1,6 +1,6 @@
-import { getScreens } from "./js/screens";
-import useExternalDisplay from "./js/useExternalDisplay";
-import SceneManager from "./js/SceneManager";
+import { getScreens } from "./src/js/screens";
+import useExternalDisplay from "./src/js/useExternalDisplay";
+import SceneManager from "./src/js/SceneManager";
 import { StyleProp, ViewProps, ViewStyle } from "react-native";
 import {Component} from "react";
 
